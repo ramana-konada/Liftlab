@@ -1,0 +1,8 @@
+<div class="grid-header">
+  <span class="grid-title">Best and Worst Performers by</span>
+</div>
+<div class="grid-container">
+  <ag-grid-angular class="ag-theme-alpine" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef"
+    [rowData]="rowData$ | async" [rowSelection]="'multiple'" [animateRows]="true" (gridReady)="onGridReady($event)"
+    (cellClicked)="onCellClicked($event)"></ag-grid-angular>
+</div>

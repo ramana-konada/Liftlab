@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .view {
+    font-weight: bold;
+    font-size: 20px;
+    color: #303030
+  }
+
+  .common-forms {
+    display: flex;
+  }
+
+  .common-drp {
+    padding: 0px 20px;
+    display: grid;
+    font-weight: 100;
+    font-size: 13px;
+  }
+
+  .dropdown {
+    width: 200px;
+    height: 32px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    color: #838383
+  }
+}
+
+.line {
+  margin-top: -1px;
+  border: 0.5px solid #e8e5e5;
+}

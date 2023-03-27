@@ -1,0 +1,44 @@
+.container {
+  height: 100%;
+  width: 100%;
+
+  .login-form {
+    height: 40px;
+    padding: 20px 200px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+  }
+
+  .content {
+    width: 90%;
+    margin: 1.5% 5%;
+
+    &__phase1 {
+      margin-bottom: 30px;
+
+      .view {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__phase2 {
+      width: 100%;
+      display: flex;
+      // margin-top: 20px;
+    }
+  }
+
+  .attention,
+  .coverage {
+    width: 25%;
+  }
+
+  .categories {
+    width: 50%;
+  }
+}
+
+.line {
+  border: 0.9px #4fdb5e solid;
+}

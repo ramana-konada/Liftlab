@@ -1,0 +1,26 @@
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+
+.grid-title {
+  color: #606060;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.grid-container {
+  height: 70%;
+  width: 100%;
+
+  .ag-theme-alpine {
+    height: 100%;
+    --ag-borders: none;
+  }
+}
+
+:host {
+  ::ng-deep {
+    .ag-row {
+      border-bottom: none;
+    }
+  }
+}

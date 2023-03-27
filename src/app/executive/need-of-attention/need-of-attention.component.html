@@ -1,0 +1,63 @@
+<div class="channels-container">
+  <div class="channels-container__content">
+
+    <div class="channels-container__attention">
+      <div class="channels-container__details">
+        <div class="channels-container__title">Channels in Need of attention</div>
+        <span class="channels-container__channel">Most overspent and underspent channels</span>
+      </div>
+      <div>
+        <label class="channels-container__switch">
+          <input type="checkbox" checked (change)="onSwitchChange($event)">
+          <span class="channels-container__slider">
+            <span>#</span>
+            <span>%</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="channels-container__details">
+      <span class="channels-container__spendings">Overspending</span>
+      <ng-container *ngFor="let pr of overSpending">
+        <div class="progress-list">
+          <span class="wizard-label">{{pr.name}}</span>
+          <div class="wizard-progress">
+            <div class="step">
+            </div>
+            <div class="step in-progress">
+              <ng-container *ngIf="!noaActive">
+                <div class="node" [ngStyle]="{'left.%': pr.percentageValue}"></div>
+                <span class="node-label" [ngStyle]="{'left.%': pr.percentageValue}">{{pr.percentageValue}}</span>
+              </ng-container>
+              <ng-container *ngIf="noaActive">
+                <div class="node" [ngStyle]="{'left.%': pr.value}"></div>
+                <span class="node-label" [ngStyle]="{'left.%': pr.value}">{{pr.value}}</span>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <span class="channels-container__spendings">Underspending</span>
+      <ng-container *ngFor="let pr of underSpending">
+        <div class="progress-list">
+          <span class="wizard-label">{{pr.name}}</span>
+          <div class="wizard-progress">
+            <div class="step">
+            </div>
+            <div class="step in-progress">
+              <ng-container *ngIf="!noaActive">
+                <div class="node" [ngStyle]="{'left.%': pr.percentageValue}"></div>
+                <span class="node-label" [ngStyle]="{'left.%': pr.percentageValue}">{{pr.percentageValue}}</span>
+              </ng-container>
+              <ng-container *ngIf="noaActive">
+                <div class="node" [ngStyle]="{'left.%': pr.value}"></div>
+                <span class="node-label" [ngStyle]="{'left.%': pr.value}">{{pr.value}}</span>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

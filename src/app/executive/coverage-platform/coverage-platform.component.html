@@ -1,0 +1,26 @@
+<div class="total-coverage">
+  <div class="gauage-container">
+    <div class="gauage-container__items">
+      <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptionsGauge1"
+        style="width: 100%; height: 200px; display: block;"></highcharts-chart>
+    </div>
+    <div class="gauage-container__items">
+      <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptionsGauge2"
+        style="width: 100%; height: 200px; display: block;"></highcharts-chart>
+    </div>
+  </div>
+
+  <div class="coverage-container">
+    <div class="coverage-container__content">Coverage by Platform</div>
+    <span class="coverage-container__channel">Percent of channel spend touched by experiments.</span>
+    <div class="coverage-container__barlist">
+      <ng-container *ngFor="let coverageBarList of coverageList">
+        <div class="coverage-bar" [ngStyle]="{'width.%': coverageBarList.percentage}">
+          <span class="coverage-bar__icon"><i class="fa-brands {{coverageBarList.icon}}" style="color: #ffffff;"></i>
+          </span>
+          <span class="coverage-bar__percentage">{{coverageBarList.percentage}}</span>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
